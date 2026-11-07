@@ -17,6 +17,8 @@ HmChat 使用 ArkTS / ArkUI、C++ Node-API 和 TDLib 接入 Telegram。功能目
 
 **这是独立、非官方、仍在早期开发的实验性项目，不隶属于 Telegram。** 当前已打通真实账号与部分核心聊天流程，距离完整 Telegram 客户端仍有明显差距。本仓库以源码和开发预览为主，不承诺稳定发行版或应用商店可用性。项目官网：[GitHub Pages](https://gscsdx.github.io/HmChat/)。
 
+本项目 Fork 自 [GaryChangCN/harlgram](https://github.com/GaryChangCN/harlgram)。在此基础上完成内置 VPN、订阅链接/YAML 导入、节点与分组选择、延迟测速，范围可选全局或仅 HmChat。代理领域测试、真实内核与订阅链路已有真机记录；系统 VPN 授权、后台保活与 release 实跑仍待完整验收。
+
 <p align="center">
   <img src="website/assets/app-phone.png" width="260" alt="HmChat 在 Pura X Max 未展开形态的界面">
   <img src="website/assets/app-unfolded.png" width="500" alt="HmChat 在 Pura X Max 展开形态的双栏界面">
@@ -179,3 +181,5 @@ HDC_TARGET='<device-id>' ./scripts/run.sh
 HmChat 自有代码、脚本、文档和资源采用 **GPL-3.0-or-later**，另有声明的第三方材料除外；见 [LICENSE](LICENSE) 与 [许可说明](docs/LICENSING.md)。TDLib 使用 Boost Software License 1.0，OpenSSL 使用 Apache License 2.0，其他随包依赖与数据保留各自许可。完整来源、归属和发布注意事项见 [第三方声明](THIRD_PARTY_NOTICES.md)。本次开源范围为源码，没有提供 HAP 发行版。
 
 感谢 Telegram、TDLib、OpenSSL、OpenHarmony / HarmonyOS 开发者工具与相关开源项目。本项目的名称与界面不代表 Telegram 官方背书。
+
+上游客户端：[GaryChangCN/harlgram](https://github.com/GaryChangCN/harlgram)

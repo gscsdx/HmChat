@@ -17,6 +17,8 @@ HmChat connects to Telegram through ArkTS / ArkUI, a C++ Node-API bridge, and TD
 
 **This is an independent, unofficial, experimental project in early development. It is not affiliated with Telegram.** Real accounts and some core messaging flows work, but substantial gaps remain. This repository provides source code and a developer preview; it does not promise a stable release or app-store availability. Project website: [GitHub Pages](https://gscsdx.github.io/HmChat/).
 
+This project is forked from [GaryChangCN/harlgram](https://github.com/GaryChangCN/harlgram). On that base it adds an embedded VPN, subscription URL/YAML import, node and group selection, latency tests, and a global or HmChat-only scope. Proxy domain tests plus the real core and subscription path have device evidence; system VPN authorization, background keep-alive, and an actual release run still require complete acceptance.
+
 <p align="center">
   <img src="website/assets/app-phone.png" width="260" alt="HmChat on a folded Pura X Max">
   <img src="website/assets/app-unfolded.png" width="500" alt="HmChat two-pane interface on an unfolded Pura X Max">
@@ -179,3 +181,5 @@ Report security problems privately as described in [SECURITY.md](SECURITY.md); u
 HmChat's own code, scripts, documentation, and assets are licensed under **GPL-3.0-or-later**, except separately identified third-party material; see [LICENSE](LICENSE) and the [licensing guide](docs/LICENSING.md). TDLib uses the Boost Software License 1.0, OpenSSL uses Apache License 2.0, and other packaged dependencies and data retain their own licenses. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for attribution, sources, and distribution notes. This publication covers source code; no HAP release is provided.
 
 Thanks to Telegram, TDLib, OpenSSL, OpenHarmony / HarmonyOS developer tools, and the related open-source projects. The project name and interface do not imply endorsement by Telegram.
+
+Upstream client: [GaryChangCN/harlgram](https://github.com/GaryChangCN/harlgram)
