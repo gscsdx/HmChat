@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "HmChat native Telegram client"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "HmChat"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "HmChat"
+    }
+  ]
+}

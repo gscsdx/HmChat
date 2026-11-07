@@ -1,0 +1,46 @@
+name: Public source checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  domain-and-config:
+    name: Domain tests and public-file safety
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install pinned TypeScript locally
+        run: npm install --prefix .local/ci --no-audit --no-fund --ignore-scripts --save-exact typescript@5.8.3
+
+      - name: Test platform-independent behavior and private configuration
+        shell: bash
+        run: |
+          export HARLGRAM_NODE_HOME="$(dirname "$(dirname "$(command -v node)")")"
+          export HARLGRAM_TYPESCRIPT="$GITHUB_WORKSPACE/.local/ci/node_modules/typescript/lib/typescript.js"
+          ./scripts/test-domain.sh
+
+      - name: Verify static progress pages
+        run: |
+          python3 scripts/build-website.py --check
+          node --check website/app.js
+
+      - name: Check tracked files for private or generated content
+        run: python3 scripts/check-public-tree.py
+
+      # This runner has no HarmonyOS SDK, signing identity, or physical device.
+      # HAP compilation and device acceptance are separate local checks.

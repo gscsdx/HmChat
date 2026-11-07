@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="HmChat 更新日志：实现范围、验证与后续计划。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="更新日志 | HmChat">
+  <meta property="og:description" content="HmChat 更新日志：实现范围、验证与后续计划。">
+  <meta property="og:url" content="https://gscsdx.github.io/HmChat/changelog.html">
+  <meta property="og:image" content="https://gscsdx.github.io/HmChat/assets/icon.png">
+  <title>更新日志 | HmChat</title>
+  <link rel="canonical" href="https://gscsdx.github.io/HmChat/changelog.html">
+  <link rel="sitemap" type="application/xml" href="https://gscsdx.github.io/HmChat/sitemap.xml">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="changelog">
+  <a class="skip-link" href="#main" data-i18n="skip">跳至内容</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="github" viewBox="0 0 24 24"><path d="M8.5 20.5v-3c-3 .6-3-1.5-4-2m11 5v-3.8c0-1-.3-1.7-.8-2.1 2.6-.3 5.3-1.2 5.3-5.8A4.5 4.5 0 0 0 18.8 6c.1-.4.5-1.9-.1-3.2 0 0-1.1-.4-3.6 1.3a12 12 0 0 0-6.2 0C6.4 2.4 5.3 2.8 5.3 2.8 4.7 4.1 5.1 5.6 5.2 6A4.5 4.5 0 0 0 4 9.3c0 4.6 2.7 5.5 5.3 5.8-.5.4-.8 1.1-.8 2.1"/></symbol>
+    <symbol id="chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-8 8H5l-3 2v-10a9 9 0 0 1 18 0Z"/><path d="M7 10h8M7 14h5"/></symbol>
+    <symbol id="key" viewBox="0 0 24 24"><circle cx="8" cy="9" r="5"/><path d="m12 13 8 8m-3-3 3-3m-6 0 3-3"/></symbol>
+    <symbol id="edit" viewBox="0 0 24 24"><path d="m14 5 5 5M4 20l5-1 12-12a2 2 0 0 0-5-5L4 14v6ZM14 20h7"/></symbol>
+    <symbol id="photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 6-6 5 5 3-3 4 4"/></symbol>
+    <symbol id="draft" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="layers" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8l10-5Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="HmChat"><img src="assets/icon.png" width="36" height="36" alt=""><span>HmChat</span></a>
+      <nav class="main-nav" aria-label="项目导航" data-i18n-aria="navigation">
+        <a href="index.html" data-i18n="nav.home">概览</a>
+        <a href="features.html" data-i18n="nav.features">现有功能</a>
+        <a href="roadmap.html" data-i18n="nav.roadmap">路线图</a>
+        <a href="changelog.html" aria-current="page" data-i18n="nav.changelog">更新日志</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="语言 / Language">
+          <button type="button" data-language="zh" aria-pressed="true">中文</button>
+          <button type="button" data-language="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+        <a class="github-icon" href="https://github.com/gscsdx/HmChat" aria-label="GitHub"><svg><use href="#github"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="doc-layout container">
+<article class="doc-content" data-doc-language="zh" lang="zh-CN">
+<h1>更新日志</h1>
+<p>本文件记录已合入源码的变化，不代表已发布可安装 HAP。<a href="features.html">现有功能</a> 说明当前能力和验证边界，<a href="roadmap.html">路线图</a> 说明后续计划。English: <a href="changelog.html">CHANGELOG.en.md</a>。</p>
+<h2>未发布 · 2026-11-06</h2>
+<h3>品牌与入口</h3>
+<ul>
+<li>用户可见品牌已统一为 HmChat，并替换为「纯黑底、白色圆环与下方横线」新图标；bundleName 改为 <code>com.hmchat.app</code>，与旧包独立且可共存，旧包数据不自动迁移。内部 <code>harlgram.*</code> 持久化键与日志 TAG 未改。</li>
+<li>取消欢迎页：未登录冷启动直接进入设置页，会话恢复成功后进入聊天，退出登录回到设置页。设置页保留登录与网络代理入口。</li>
+</ul>
+<h3>新增与调整</h3>
+<ul>
+<li>设置页提供 10 组 API 预设，仅以 <code>ID ****末四位 / Hash ****末四位</code> 掩码显示，选择结果只持久化索引；不在文档记录实际凭据。</li>
+<li>聊天筛选栏固定为「全部/未读/群组/频道」四项，补齐按筛选区分的空态；超级群归入群组，广播频道归入频道。</li>
+<li>登录支持区号输入自动匹配国家/地区，已验证 <code>+1</code>→美国、<code>+7</code>→俄罗斯、<code>+86</code>→中国，国家选择器同步。</li>
+<li>新增 mihomo 网络代理：设置内 VPN 开关、订阅链接与 YAML 导入、节点/分组选择与测速、全局或仅 HmChat 范围。代理领域测试与真实内核/订阅链路已在指定真机验证。</li>
+</ul>
+<h3>验证与限制</h3>
+<ul>
+<li><code>PYTHONUTF8=1 ./scripts/test-domain.sh</code> 通过 534 项（533 pass / 0 fail / 1 skip）；真实 SDK 26 编译、signed HAP 覆盖安装与启动通过。上述结果不代表全功能验收。</li>
+<li>系统 VPN 授权、代理开关后的 protect 降级与后台保活、通知、release 构建实跑尚未验证；GPL 对应源码包与第三方许可未补齐，当前不可分发。本次仍为源码开发预览，不发布 HAP。</li>
+</ul>
+<h2>未发布 · 2026-11-01</h2>
+<h3>调整与修复</h3>
+<ul>
+<li>设置、账户与存储等页面采用 HDS 原生标题、设置行和按钮层级，完善搜索、选择和返回交互；设计规范集中维护并由 AGENTS.md 引用。</li>
+<li>聊天详情保留原头像、紧凑标题栏和会话操作展开区，原返回栈、消息、草稿与媒体布局保持。</li>
+</ul>
+<h3>验证与限制</h3>
+<ul>
+<li>页面返回、键盘及原草稿保留已有指定真机记录；其他窗口形态、大字号和完整无障碍仍需独立验收。</li>
+<li>官网功能、路线图和中英文更新日志同步生成。本次为源码开发预览，不发布 HAP。</li>
+</ul>
+<h2>未发布 · 2026-10-31</h2>
+<h3>新增</h3>
+<ul>
+<li>多账户添加/切换、二级账户管理与头像；凭据、数据库和媒体策略按账户隔离，未完成登录不显示假账户。</li>
+<li>最多 10 项图片/视频混合选择、相册发送与网格、前后浏览，以及系统确认后保存。</li>
+<li>原生视频边下边播、未缓存位置定位及自动续播、前后 30 秒、七档倍速、长按临时 2×/松手恢复；单击显隐、双击播放暂停、横滑定位及后台暂停。</li>
+<li>存储分类统计、选择性/按会话清缓存、保留期限与缓存上限；按网络控制媒体自动下载和大小，以及流量统计。</li>
+<li>常见 RichMessage 区块、富文本实体、群头像/连续发言、转发来源和回复摘要。</li>
+<li>官网「现有功能」「路线图」「更新日志」独立入口，从同一份中英文 Markdown 生成。</li>
+</ul>
+<h3>修复</h3>
+<ul>
+<li>登录错误、重复提交、重发与超时出口；启动/登录使用项目图标。</li>
+<li>消息底部跟随、键盘收起/展开后的锚点、媒体比例与奇数相册排列。</li>
+<li>视频异步定位竞争、旧进度覆盖目标、播放/暂停意图竞争、缓存清理后的失效路径与冷启动，以及播放器控件定位/可读性。</li>
+<li>存储设置开关与摘要响应式刷新；账户切换时的旧请求/文件状态隔离。</li>
+</ul>
+<h3>文档与验证</h3>
+<ul>
+<li>路线图按优先级与验收条件重新整理，完成项移到现有功能，保留 Web A 逐项对齐矩阵。</li>
+<li>本批次 316 项宿主机回归、SDK 26 编译签名、真机正常覆盖安装/启动通过；真实双账户、跨端媒体、冷缓存视频与手势有对应记录。不能据此推断全部编码或所有形态通过。</li>
+<li>公开内容继续排除 API 私密配置、签名、会话、数据库、原始截图/日志及私人运维地址；当前仍为源码开发预览。</li>
+</ul>
+<h2>初始源码公开 · 2026-10-29</h2>
+<ul>
+<li>初始化 HarmonyOS NEXT / ArkUI 工程、固定 TDLib 与安全存储接入、真实登录和基础聊天/消息操作。</li>
+<li>准备 GPL-3.0-or-later 许可、第三方通知、开发/AI 协作规范、构建/设备脚本、公开安全检查及脱敏配图。</li>
+<li>中文默认、英文 README，以及使用默认 GitHub Pages 域名的静态官网。</li>
+</ul>
+<p>未单独发布或验证的能力不追溯写为已发布版本；实际合入记录以 Git 历史为准。</p>
+</article>
+<article class="doc-content" data-doc-language="en" lang="en" hidden>
+<h1>Changelog</h1>
+<p>This records source changes, not an installable HAP release. See <a href="features.html">features</a> for current scope and evidence, and the <a href="roadmap.html">roadmap</a> for plans. <a href="changelog.html">中文</a>.</p>
+<h2>Unreleased · 2026-11-06</h2>
+<h3>Brand and entry points</h3>
+<ul>
+<li>User-visible branding is now HmChat, with a new black-and-white ring icon; bundleName is now <code>com.hmchat.app</code>, installed alongside the old package with no automatic data migration. Internal <code>harlgram.*</code> storage keys and log tags are unchanged.</li>
+<li>The welcome screen is gone: an unauthenticated cold start opens Settings, a restored session opens Chats, and logout returns to Settings. Settings keeps the sign-in and network-proxy entries.</li>
+</ul>
+<h3>Added and changed</h3>
+<ul>
+<li>Settings offers 10 API presets shown only as masked <code>ID ****last4 / Hash ****last4</code>; only the selected index is persisted, and no credential values are recorded.</li>
+<li>The chat filter bar is a fixed All/Unread/Groups/Channels set with filter-specific empty states; supergroups count as groups and broadcast channels as channels.</li>
+<li>Sign-in matches the country/region from a typed calling code; <code>+1</code> US, <code>+7</code> Russia and <code>+86</code> China are verified with the country picker kept in sync.</li>
+<li>mihomo network proxy: in-app VPN switch, subscription-link and YAML import, node/group selection and latency tests, and global or HmChat-only scope. Proxy domain tests and the real core/subscription path are verified on the designated device.</li>
+</ul>
+<h3>Validation and limitations</h3>
+<ul>
+<li><code>PYTHONUTF8=1 ./scripts/test-domain.sh</code> passes 534 tests (533 pass / 0 fail / 1 skip); real SDK 26 compilation plus signed HAP update-install and launch passed. These are not full-feature acceptance.</li>
+<li>System VPN authorization, protect fallback and background keep-alive after toggling, notifications and release-build runtime remain unverified; the GPL source bundle and third-party licenses are incomplete, so builds are not distributable. This remains a source preview, not a HAP release.</li>
+</ul>
+<h2>Unreleased · 2026-11-01</h2>
+<h3>Changed and fixed</h3>
+<ul>
+<li>HDS native titles, settings rows and button hierarchy for settings, accounts and storage pages, with improved search, selection and back navigation. AGENTS.md links the shared design guidelines.</li>
+<li>Chat details retain the original avatar, compact header and expandable conversation actions, preserving navigation, messages, drafts and media layout.</li>
+</ul>
+<h3>Validation and limitations</h3>
+<ul>
+<li>Navigation, keyboard handling and original-draft retention have designated-device evidence. Other window forms, large text and complete accessibility require separate validation.</li>
+<li>Website features, roadmap and bilingual changelog are regenerated together. This is a source preview, not a HAP release.</li>
+</ul>
+<h2>Unreleased · 2026-10-31</h2>
+<h3>Added</h3>
+<ul>
+<li>Multiple accounts, nested account manager and avatars; isolated credentials/database/media policy; unfinished logins stay out of the account list.</li>
+<li>Up to 10 mixed photos/videos, album sending/grids, browsing and confirmed system export.</li>
+<li>Progressive native video, uncached seeking/automatic resume, ±30 seconds, seven speeds and temporary 2× hold with restoration; tap/double-tap/swipe controls and background pause.</li>
+<li>Category/per-chat cache management, retention/caps, network-specific media limits and traffic statistics.</li>
+<li>Common RichMessage blocks, text entities, group avatars/grouping, forwarding and reply previews.</li>
+<li>Dedicated website Features, Roadmap and Changelog navigation, generated from shared bilingual Markdown.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Login errors, duplicate submissions, resend/timeout handling and project branding on startup/login.</li>
+<li>Message-bottom following, keyboard anchors, media proportions and odd album layouts.</li>
+<li>Asynchronous seek/play intent races, stale progress, missing cache paths/cold starts and player-control placement/readability.</li>
+<li>Reactive storage settings and stale account/file-update isolation.</li>
+</ul>
+<h3>Documentation and validation</h3>
+<ul>
+<li>Prioritized roadmap with acceptance criteria, current capabilities separated from plans, and the detailed Web A matrix retained.</li>
+<li>316 host tests, real SDK 26 signed compilation and device update-install/launch passed. Two-account, cross-client media, cold-cache video and gesture evidence is recorded separately. No claim covers every codec/device.</li>
+<li>API secrets, signing, sessions, databases, raw screenshots/logs and private deployment addresses remain excluded. This is a source development preview.</li>
+</ul>
+<h2>Initial source publication · 2026-10-29</h2>
+<ul>
+<li>Native HarmonyOS NEXT/ArkUI foundation, pinned TDLib/security integration, real authentication and basic chats/message actions.</li>
+<li>GPL-3.0-or-later, dependency notices, development/AI handoff docs, build/device scripts, public-file checks and redacted illustrations.</li>
+<li>Chinese-default/English README and static website on the default GitHub Pages domain.</li>
+</ul>
+<p>Unreleased or unverified features are not retroactively labeled released; Git history is authoritative for actual merges.</p>
+</article>
+  </main>
+  <footer class="site-footer container"><div class="footer-main"><a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="30" height="30"><span>HmChat</span></a><div class="footer-links"><a href="https://github.com/gscsdx/HmChat/blob/main/LICENSE">GPL-3.0-or-later</a><a href="https://github.com/gscsdx/HmChat/blob/main/THIRD_PARTY_NOTICES.md" data-i18n="footer.notices">第三方声明</a><a href="https://github.com/gscsdx/HmChat/issues" data-i18n="footer.issues">问题反馈</a></div></div><div class="footer-bottom"><p data-i18n="footer.disclaimer">独立开源项目，非 Telegram 官方客户端。第三方依赖遵循各自许可。</p><p data-i18n="footer.privacy">本网站无追踪、无外部字体、无第三方脚本。</p></div></footer>
+</body>
+</html>

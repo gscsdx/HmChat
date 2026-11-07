@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="HmChat 路线图：实现范围、验证与后续计划。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="路线图 | HmChat">
+  <meta property="og:description" content="HmChat 路线图：实现范围、验证与后续计划。">
+  <meta property="og:url" content="https://gscsdx.github.io/HmChat/roadmap.html">
+  <meta property="og:image" content="https://gscsdx.github.io/HmChat/assets/icon.png">
+  <title>路线图 | HmChat</title>
+  <link rel="canonical" href="https://gscsdx.github.io/HmChat/roadmap.html">
+  <link rel="sitemap" type="application/xml" href="https://gscsdx.github.io/HmChat/sitemap.xml">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="roadmap">
+  <a class="skip-link" href="#main" data-i18n="skip">跳至内容</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="github" viewBox="0 0 24 24"><path d="M8.5 20.5v-3c-3 .6-3-1.5-4-2m11 5v-3.8c0-1-.3-1.7-.8-2.1 2.6-.3 5.3-1.2 5.3-5.8A4.5 4.5 0 0 0 18.8 6c.1-.4.5-1.9-.1-3.2 0 0-1.1-.4-3.6 1.3a12 12 0 0 0-6.2 0C6.4 2.4 5.3 2.8 5.3 2.8 4.7 4.1 5.1 5.6 5.2 6A4.5 4.5 0 0 0 4 9.3c0 4.6 2.7 5.5 5.3 5.8-.5.4-.8 1.1-.8 2.1"/></symbol>
+    <symbol id="chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-8 8H5l-3 2v-10a9 9 0 0 1 18 0Z"/><path d="M7 10h8M7 14h5"/></symbol>
+    <symbol id="key" viewBox="0 0 24 24"><circle cx="8" cy="9" r="5"/><path d="m12 13 8 8m-3-3 3-3m-6 0 3-3"/></symbol>
+    <symbol id="edit" viewBox="0 0 24 24"><path d="m14 5 5 5M4 20l5-1 12-12a2 2 0 0 0-5-5L4 14v6ZM14 20h7"/></symbol>
+    <symbol id="photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 6-6 5 5 3-3 4 4"/></symbol>
+    <symbol id="draft" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="layers" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8l10-5Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="HmChat"><img src="assets/icon.png" width="36" height="36" alt=""><span>HmChat</span></a>
+      <nav class="main-nav" aria-label="项目导航" data-i18n-aria="navigation">
+        <a href="index.html" data-i18n="nav.home">概览</a>
+        <a href="features.html" data-i18n="nav.features">现有功能</a>
+        <a href="roadmap.html" aria-current="page" data-i18n="nav.roadmap">路线图</a>
+        <a href="changelog.html" data-i18n="nav.changelog">更新日志</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="语言 / Language">
+          <button type="button" data-language="zh" aria-pressed="true">中文</button>
+          <button type="button" data-language="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+        <a class="github-icon" href="https://github.com/gscsdx/HmChat" aria-label="GitHub"><svg><use href="#github"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="doc-layout container">
+<article class="doc-content" data-doc-language="zh" lang="zh-CN">
+<h1>路线图</h1>
+<p>更新：2026-10-31。目标是逐项对齐 Telegram Web A 手机尺寸的真实能力，交互采用鸿蒙官方 ArkUI。先做好手机单栏和阔折叠未展开窗口，再扩展其他形态。不承诺未验证的发布日期，不把已有源码或截图当作全面通过。</p>
+<p><a href="features.html">现有功能</a> 记录完成范围，<a href="changelog.html">更新日志</a> 记录变化；<a href="https://github.com/gscsdx/HmChat/blob/main/docs/TELEGRAM_WEB_PARITY.md">Web A 矩阵</a> 是逐项验收依据。English: <a href="roadmap.html">ROADMAP.en.md</a>。</p>
+<h2>已交付的基础</h2>
+<p>真实登录、双账户切换、基础消息操作、富内容展示、图片/视频相册、原生流式播放器、当前账户存储管理、三态外观和公开源码/官网已实现，并有各自测试证据。详细边界统一放在现有功能页，不在待办中重复列为「完全缺失」。</p>
+<h2>优先级与验收条件</h2>
+<div class="doc-table" tabindex="0" role="region" aria-label="功能与计划表"><table>
+<thead>
+<tr><th scope="col">优先级</th><th scope="col">下一步</th><th scope="col">完成条件</th></tr>
+</thead>
+<tbody>
+<tr><td>P0 · 当前链路正确性</td><td>历史跨页引用/锚点、完整已读、发送与草稿并发、更多权限/失败恢复</td><td>真实跨端复核；切聊天/键盘/网络变化不丢草稿、不重复发送，不伪造送达</td></tr>
+<tr><td>P0 · 媒体与缓存可靠性</td><td>更多编码/容器、非 faststart、弱网/断网/音频中断；上传暂存安全回收</td><td>合成材料真机覆盖；缺片可恢复、关闭不留任务；回收有引用索引，不能删除待发送/重试素材</td></tr>
+<tr><td>P1 · 查找与组织</td><td>服务端全局/聊天内搜索、归档、云端文件夹、资料和共享媒体</td><td>结果来自真实服务端，分页/过滤/权限准确，返回保持来源和位置</td></tr>
+<tr><td>P1 · 完整消息能力</td><td>任意文件、语音/音乐、贴纸/GIF、消息多选/反应/置顶与完整引用</td><td>Web A 对应入口、TDLib 请求、原生交互及真实收发分别验收</td></tr>
+<tr><td>P1 · 多账户完整性</td><td>非活动账户同步/通知、更多未读/草稿/文件/退出隔离</td><td>退出或清理一个账户不影响另一个，旧更新不能污染当前账户</td></tr>
+<tr><td>P2 · 设置与管理</td><td>隐私/设备会话、群/频道管理、权限、邀请与成员；更多下载例外</td><td>服务端权限驱动入口和结果；敏感/不可逆操作有明确范围与确认</td></tr>
+<tr><td>P2 · 系统通知</td><td>系统通知权限、后台送达与点击同步</td><td>华为权益/Token、注册/注销、重试、后台真机送达和点击同步通过，默认不传消息正文</td></tr>
+<tr><td>P2 · 播放器增强</td><td>画中画、字幕/多音轨、质量切换、自动保存相册</td><td>平台/消息确实提供能力后再实现；权限和生命周期独立验收</td></tr>
+<tr><td>P3 · 更多形态与可用性</td><td>展开/收拢、旋转、平板、大屏、分屏、多窗口、大字号/无障碍/更多语言</td><td>当前账户、会话、草稿、搜索和滚动锚点连续，不重复请求或发送</td></tr>
+<tr><td>发行门槛</td><td>可分发构建、源码/许可/依赖材料、签名、版本与包验证</td><td>可重建且无私密材料泄露；发布配置检查和许可通知通过，二进制与源码对应</td></tr>
+</tbody>
+</table></div>
+<h2>暂停与试验</h2>
+<ul>
+<li>GitHub Actions 云端 HAP 打包仍暂停；当前 CI 做领域/公开安全检查和静态官网部署，不提供正式 HAP。</li>
+<li>通话、Stories 和其他 Web A 能力依矩阵继续推进；本页分组不是缩减完整目标。</li>
+</ul>
+<h2>当前集成的关键检查</h2>
+<ol>
+<li>模式切换后旧 TDLib 更新不会污染离线演示数据，离线恢复不会被重新播种覆盖。</li>
+<li>历史分页与实时入站同时发生时不丢消息；发送回执正确替换临时 ID。</li>
+<li>会话排序保留 int64 精度，未读、置顶、静音与服务端更新一致。</li>
+<li>Asset 读取失败不重新生成数据库密钥；关闭后重启可恢复同一数据库。</li>
+<li>开发者自有 API 配置通过本机文件注入；私有源文件和生成文件均未被 Git 追踪；正式 release guard 已验证拒绝缺失或无效配置。</li>
+<li>未发生账号认证和双向消息验证前，项目描述保持为「真实接入开发中」。</li>
+</ol>
+<h2>近期交付边界</h2>
+<p>当前工作以已创建的鸿蒙基础工程为起点，建立可持续迭代的原生客户端和真实 Telegram 链路。界面复刻、源码架构参考、底层协议接入和完整 Telegram 功能覆盖是不同的工作项；项目状态应逐项反映进展。</p>
+<h2>通知与离线推送（待实施）</h2>
+<p>通知权限、后台送达、点击后同步及退出解绑仍需实现和独立真机验证，当前不承诺离线通知可用。</p>
+</article>
+<article class="doc-content" data-doc-language="en" lang="en" hidden>
+<h1>Roadmap</h1>
+<p>Updated: 2026-10-31. The goal is feature-by-feature Telegram Web A mobile parity with native ArkUI interactions. Single-column phones and the folded wide-fold device come first. No unverified release dates or claims of full parity.</p>
+<p><a href="features.html">Features</a> describes current scope; the <a href="changelog.html">changelog</a> records changes. The detailed <a href="https://github.com/gscsdx/HmChat/blob/main/docs/TELEGRAM_WEB_PARITY.md">Web A matrix</a> defines acceptance. <a href="roadmap.html">中文</a>.</p>
+<h2>Foundation delivered</h2>
+<p>Real authentication, two-account switching, core message actions, rich display, mixed albums, progressive native video, per-account storage management, three-state appearance, source publication and the website exist with separate evidence. Their remaining boundaries are on the Features page, rather than labeling them wholly absent.</p>
+<h2>Priorities and acceptance</h2>
+<div class="doc-table" tabindex="0" role="region" aria-label="Features and plans table"><table>
+<thead>
+<tr><th scope="col">Priority</th><th scope="col">Next work</th><th scope="col">Acceptance</th></tr>
+</thead>
+<tbody>
+<tr><td>P0 · Correctness</td><td>Cross-page reply/scroll anchors, full read semantics, concurrent drafts/sends, permissions/failure recovery</td><td>Real cross-client checks; no lost drafts, duplicate sends or fabricated delivery across chat/keyboard/network changes</td></tr>
+<tr><td>P0 · Media/cache reliability</td><td>More codecs/containers, non-faststart, weak/offline networks and audio interruptions; safe upload-staging reclamation</td><td>Synthetic-device coverage; missing chunks recover, tasks stop on close; reference-aware cleanup preserves pending/retry media</td></tr>
+<tr><td>P1 · Discovery/organization</td><td>Server global/in-chat search, archive, cloud folders, profiles/shared media</td><td>Genuine server results with correct paging/filtering/permissions and preserved navigation context</td></tr>
+<tr><td>P1 · Complete messaging</td><td>Arbitrary files, voice/music, stickers/GIFs, selection/reactions/pinning and full replies</td><td>Web A entry, TDLib implementation, native interaction and live exchange separately accepted</td></tr>
+<tr><td>P1 · Account completeness</td><td>Inactive synchronization/notifications; more unread/draft/file/logout isolation</td><td>Cleaning or logging out one account cannot affect another; stale updates cannot leak across accounts</td></tr>
+<tr><td>P2 · Settings/admin</td><td>Privacy/devices, groups/channels, roles/invites/members, more download exceptions</td><td>Server-permission-driven actions and explicit scope/confirmation for sensitive changes</td></tr>
+<tr><td>P2 · Notifications</td><td>Candidate Simple Push → Worker → HarmonyOS Push Kit</td><td>Entitlements/tokens, registration/revocation, retry, background delivery and tap-to-sync; no message body by default</td></tr>
+<tr><td>P2 · Player enhancements</td><td>PiP, subtitles/tracks, quality selection and automatic gallery export</td><td>Implement only when platform/message capabilities exist, with independent permission/lifecycle tests</td></tr>
+<tr><td>P3 · Other forms/accessibility</td><td>Folding transitions, rotation, tablet/large/split/free windows, large text, accessibility and languages</td><td>Keep account/chat/draft/search/scroll context; no duplicate requests or sends</td></tr>
+<tr><td>Distribution gate</td><td>Reproducible packages, source/license/dependency records, signing/version/package checks</td><td>No private materials, release guards and notices passed, matching source and binary</td></tr>
+</tbody>
+</table></div>
+<h2>Paused and experimental</h2>
+<ul>
+<li>Cloud HAP builds in GitHub Actions remain paused. CI checks domain/public safety and deploys only the static site; no official HAP is published.</li>
+<li>Calls, Stories and other Web A capabilities remain in the full matrix; these groups do not narrow that scope.</li>
+</ul>
+<h2>Notifications (planned)</h2>
+<p>Notification permissions, background delivery, synchronization after a tap and sign-out cleanup still require implementation and independent device validation. Offline notifications are not operational.</p>
+</article>
+  </main>
+  <footer class="site-footer container"><div class="footer-main"><a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="30" height="30"><span>HmChat</span></a><div class="footer-links"><a href="https://github.com/gscsdx/HmChat/blob/main/LICENSE">GPL-3.0-or-later</a><a href="https://github.com/gscsdx/HmChat/blob/main/THIRD_PARTY_NOTICES.md" data-i18n="footer.notices">第三方声明</a><a href="https://github.com/gscsdx/HmChat/issues" data-i18n="footer.issues">问题反馈</a></div></div><div class="footer-bottom"><p data-i18n="footer.disclaimer">独立开源项目，非 Telegram 官方客户端。第三方依赖遵循各自许可。</p><p data-i18n="footer.privacy">本网站无追踪、无外部字体、无第三方脚本。</p></div></footer>
+</body>
+</html>

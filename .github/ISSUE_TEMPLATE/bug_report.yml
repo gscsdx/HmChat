@@ -1,0 +1,65 @@
+name: 问题报告 / Bug report
+description: 报告可复现问题，请勿包含账号、消息或密钥。 Report a reproducible issue without private data.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        安全漏洞请勿公开，请先阅读 [SECURITY.md](https://github.com/gscsdx/HmChat/blob/main/SECURITY.md)。
+        For vulnerabilities, use the private reporting channel in SECURITY.md.
+        不要上传真实消息、手机号、验证码、API Hash、数据库、签名、设备序列号或未遮挡截图。
+        Never attach account data, secrets, databases, device serials, or unredacted captures.
+  - type: input
+    id: version
+    attributes:
+      label: 版本或 commit / Version or commit
+      description: 请注明源码构建版本；未知时直接写未知。 Identify the source revision, or say unknown.
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 运行模式 / Runtime mode
+      options:
+        - 真实账号 / Real account
+        - 离线演示 / Offline preview
+        - DevEco Preview 或 mock / Preview or mock
+        - 构建或脚本 / Build or script
+        - 不确定 / Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境 / Environment
+      description: OS/API、SDK、设备类别和折叠/窗口状态；构建问题补宿主 OS。不要填序列号或用户路径。
+      placeholder: "HarmonyOS / API: …\nSDK: …\nPhone/tablet/foldable, folded/unfolded, window size: …\nHost OS (build issues): …"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤 / Steps to reproduce
+      description: 使用虚构内容描述最小步骤，不要求对真实联系人执行操作。 Use fictional content and minimal steps.
+      placeholder: "1. …\n2. …\n3. …"
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 预期与实际 / Expected and actual behavior
+      description: 注明是否每次发生、是否存在可恢复方式。 Include frequency and any workaround.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 去敏证据 / Sanitized evidence
+      description: 可选。仅提供必要错误类别或已彻底遮挡的截图；不要粘贴完整日志或 TDLib JSON。 Optional, no raw logs or TDLib payloads.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 发布前确认 / Before posting
+      options:
+        - label: 已检查本报告不包含真实账号内容、秘密或设备标识。 I checked that this report contains no private account content, secrets, or device identifiers.
+          required: true

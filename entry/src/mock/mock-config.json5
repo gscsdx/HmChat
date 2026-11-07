@@ -1,0 +1,4 @@
+{
+  // Device tests must exercise the real native library. Preview-only stubs are
+  // opt-in: do not automatically substitute Libentry.mock in a signed test HAP.
+}

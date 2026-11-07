@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.so binary
+*.hap binary
+*.har binary
+# Preserve verbatim upstream license whitespace.
+entry/src/main/resources/rawfile/licenses/*.txt -whitespace

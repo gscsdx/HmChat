@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 私下报告安全问题 / Report a security issue privately
+    url: https://github.com/gscsdx/HmChat/blob/main/SECURITY.md
+    about: 请勿在公开 Issue 中发布漏洞利用细节、密钥或用户数据。 Do not publish exploit details or private data in issues.
+  - name: 构建与开发说明 / Build and development guide
+    url: https://github.com/gscsdx/HmChat/blob/main/docs/DEVELOPMENT.md
+    about: 先核对 SDK、依赖、API 配置和签名说明。 Check SDK, dependencies, API configuration, and signing setup.

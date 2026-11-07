@@ -1,0 +1,10 @@
+{
+  "reviewedOn": "2026-11-06",
+  "policy": "docs/PUBLIC_ASSETS.md",
+  "sha256": {
+    "AppScope/resources/base/media/harlgram_icon.png": "801b748d04ed48140edbdb96729289d8ddb97b195b50516d30b302e79e2903b9",
+    "website/assets/app-phone.png": "e55968e402b4c13aa4ee91679c7141ef5ba50cae94281b2ebc1dbcf70bebf5eb",
+    "website/assets/app-unfolded.png": "c7240f8c4711e9e6207b762c683b0f434f03894b1625d2c938ac9e3e039695aa",
+    "website/assets/icon.png": "8c3ade3022209612abb6c7af672231c145747d28edf28e6cd6ef158bae06c4e0"
+  }
+}

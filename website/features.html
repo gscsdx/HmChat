@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="HmChat 现有功能：实现范围、验证与后续计划。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="现有功能 | HmChat">
+  <meta property="og:description" content="HmChat 现有功能：实现范围、验证与后续计划。">
+  <meta property="og:url" content="https://gscsdx.github.io/HmChat/features.html">
+  <meta property="og:image" content="https://gscsdx.github.io/HmChat/assets/icon.png">
+  <title>现有功能 | HmChat</title>
+  <link rel="canonical" href="https://gscsdx.github.io/HmChat/features.html">
+  <link rel="sitemap" type="application/xml" href="https://gscsdx.github.io/HmChat/sitemap.xml">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="features">
+  <a class="skip-link" href="#main" data-i18n="skip">跳至内容</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="github" viewBox="0 0 24 24"><path d="M8.5 20.5v-3c-3 .6-3-1.5-4-2m11 5v-3.8c0-1-.3-1.7-.8-2.1 2.6-.3 5.3-1.2 5.3-5.8A4.5 4.5 0 0 0 18.8 6c.1-.4.5-1.9-.1-3.2 0 0-1.1-.4-3.6 1.3a12 12 0 0 0-6.2 0C6.4 2.4 5.3 2.8 5.3 2.8 4.7 4.1 5.1 5.6 5.2 6A4.5 4.5 0 0 0 4 9.3c0 4.6 2.7 5.5 5.3 5.8-.5.4-.8 1.1-.8 2.1"/></symbol>
+    <symbol id="chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-8 8H5l-3 2v-10a9 9 0 0 1 18 0Z"/><path d="M7 10h8M7 14h5"/></symbol>
+    <symbol id="key" viewBox="0 0 24 24"><circle cx="8" cy="9" r="5"/><path d="m12 13 8 8m-3-3 3-3m-6 0 3-3"/></symbol>
+    <symbol id="edit" viewBox="0 0 24 24"><path d="m14 5 5 5M4 20l5-1 12-12a2 2 0 0 0-5-5L4 14v6ZM14 20h7"/></symbol>
+    <symbol id="photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 6-6 5 5 3-3 4 4"/></symbol>
+    <symbol id="draft" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="layers" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8l10-5Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="HmChat"><img src="assets/icon.png" width="36" height="36" alt=""><span>HmChat</span></a>
+      <nav class="main-nav" aria-label="项目导航" data-i18n-aria="navigation">
+        <a href="index.html" data-i18n="nav.home">概览</a>
+        <a href="features.html" aria-current="page" data-i18n="nav.features">现有功能</a>
+        <a href="roadmap.html" data-i18n="nav.roadmap">路线图</a>
+        <a href="changelog.html" data-i18n="nav.changelog">更新日志</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="语言 / Language">
+          <button type="button" data-language="zh" aria-pressed="true">中文</button>
+          <button type="button" data-language="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+        <a class="github-icon" href="https://github.com/gscsdx/HmChat" aria-label="GitHub"><svg><use href="#github"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="doc-layout container">
+<article class="doc-content" data-doc-language="zh" lang="zh-CN">
+<h1>现有功能</h1>
+<p>更新：2026-11-06。HmChat 是开发中的 HarmonyOS NEXT 原生 Telegram 第三方客户端，尚未全面对齐 Telegram Web A。本页说明实际能力与边界；<a href="roadmap.html">路线图</a> 说明后续计划，<a href="changelog.html">更新日志</a> 记录变化，<a href="https://github.com/gscsdx/HmChat/blob/main/docs/TELEGRAM_WEB_PARITY.md">逐项 Web A 对齐矩阵</a> 提供更细的功能入口与验收条件。</p>
+<h2>如何理解状态</h2>
+<p>「已实现」是有真实协议与原生交互；「真机验证」只覆盖列出的动作和设备；「部分」表示仍有明确缺口。宿主测试、SDK 编译、设备启动与真实服务端同步分别记录，不能互相替代。当前主要验收手机单栏与阔折叠真机未展开窗口，不由单一场景推断所有编码、账户或设备均通过。</p>
+<h2>功能与验证范围</h2>
+<div class="doc-table" tabindex="0" role="region" aria-label="功能与计划表"><table>
+<thead>
+<tr><th scope="col">领域</th><th scope="col">当前能力</th><th scope="col">已有验证</th><th scope="col">边界 / Web A 差距</th></tr>
+</thead>
+<tbody>
+<tr><td>登录</td><td>国家/区号与手机号分离，区号输入自动匹配国家/地区（<code>+1</code>→美国、<code>+7</code>→俄罗斯、<code>+86</code>→中国）；验证码、已有两步密码、邮箱认证；注册状态、重发、30 秒超时与错误出口</td><td>两个真实账户登录、覆盖安装和正常重启保持；<code>+1</code>/<code>+7</code>/<code>+86</code> 区号匹配在指定真机核对</td><td>注册、所有收码渠道和异常恢复并未逐一真实验收</td></tr>
+<tr><td>多账户</td><td>二级账户管理、头像、添加/切换；各账户凭据、加密数据库与下载策略隔离；未完成登录不列入账户</td><td>两个账户往返、冷启动恢复及头像保持</td><td>仅活动账户连接；非活动账户实时通知、完整退出/草稿/未读隔离仍待更多验收</td></tr>
+<tr><td>会话与联系人</td><td>真实列表、头像、未读、草稿摘要、历史分页，已有联系人与收藏夹；置顶/静音入口；筛选栏完整（全部/未读/群组/频道）与对应空态；超级群归群组、广播频道归频道</td><td>真实列表与会话打开、历史、草稿、头像；筛选栏四项显示/切换与空态在指定真机复测；超级群/频道分类由领域测试覆盖</td><td>搜索/筛选仅已加载数据；没有服务端全局搜索、云端文件夹和完整归档；真实账户下超级群/频道显示未做设备实测</td></tr>
+<tr><td>文本与消息操作</td><td>收发与发送状态、回复、编辑、转发、按权限删除、复制入口</td><td>文本收发，回复/编辑、转发到收藏夹、仅为自己删除在真机和 Web 同账号核对</td><td>复制入口未单独实机执行；跨页引用定位、完整已读语义、多选/反应及复杂权限待补</td></tr>
+<tr><td>消息展示</td><td>原生富文本、常见 RichMessage 区块、群发送者/头像、连续发言、日期、转发与回复摘要</td><td>三组真实群聊只读对照；合成媒体/草稿回归</td><td>复杂区块、完整贴纸/GIF 与其他特殊消息不能算全面支持</td></tr>
+<tr><td>图片与相册</td><td>系统最多 10 项图片/视频混选、说明、移除、分组发送，网格、前后浏览、图片缩放及确认后保存</td><td>双向照片/视频相册与独立视频，系统保存、双击缩放</td><td>原文件、质量/编辑/重排、HEIF、连续双指手势和更多失败场景待完善</td></tr>
+<tr><td>视频播放</td><td>AVPlayer 边下边播、未缓存定位后自动恢复、前后 30 秒、七档倍速、长按临时 2×并松手恢复；单击/双击/横滑、控制栏、静音、后台暂停</td><td>150 秒 H.264/AAC MP4 真机冷缓存起播、远端定位、跨片段至结尾、1.5×→2×→1.5×与 30 秒跳转通过</td><td>更多编码、非 faststart、真实弱网/来电、画中画、字幕/音轨及清晰度切换未完成</td></tr>
+<tr><td>存储与网络</td><td>当前账户分类占用、类型/会话清缓存、私聊/群/频道期限、缓存上限；按 Wi-Fi/移动/漫游设置图片/视频/动图自动下载与大小；网络用量</td><td>真实统计、选择性清理、清后视频重取、偏好跨冷启动保持</td><td>自动维护仅进程运行时；非活动账户、上传暂存安全回收、联系人级例外、自动保存相册待补</td></tr>
+<tr><td>网络代理（mihomo）</td><td>设置内 VPN 开关；订阅链接与 YAML 文件导入；节点/分组选择与测速；代理范围可选全局或仅 HmChat</td><td>代理领域测试与真实内核/订阅链路已在指定真机验证</td><td>系统 VPN 授权、开关后的 protect 降级与后台保活、通知、release 构建实跑尚未完成；GPL 对应源码包与第三方许可未补齐，暂不可分发</td></tr>
+<tr><td>原生外观</td><td>设置、账户、存储等页采用 HDS 标题/设置行；聊天详情保留原紧凑样式；系统菜单/弹层、玻璃底栏、浅色/深色/跟随系统及安全区</td><td>真机逐页返回、键盘/草稿保留、外观保存、系统跟随及覆盖安装/重启保持</td><td>完整无障碍、大字号与所有系统变化场景仍需专门验收</td></tr>
+<tr><td>折叠与大屏</td><td>按可用宽度设计，已有展开双栏静态画面</td><td>已有脱敏真机静态展示</td><td>完整折叠/旋转/分屏状态连续性尚未验收，当前优先未展开形态</td></tr>
+<tr><td>离线预览</td><td>与真实账户隔离的虚构本地数据</td><td>领域测试与 UI 开发入口</td><td>本地操作不代表云端送达</td></tr>
+</tbody>
+</table></div>
+<h2>明确尚未支持</h2>
+<ul>
+<li>服务端全局/聊天内搜索、真实云端文件夹、完整归档与资料/共享媒体。</li>
+<li>任意文件、语音/音乐完整收发，完整贴纸/GIF 交互、消息多选/反应、群/频道管理。</li>
+<li>后台推送与可靠离线通知、语音视频通话、Stories、完整隐私/设备会话管理。</li>
+<li>画中画、字幕/多音轨、质量切换及全部设备形态验收。</li>
+</ul>
+<p>通知方案仍在路线图阶段。不要依赖当前开发预览接收重要通知。</p>
+<h2>验证基线与进一步阅读</h2>
+<p>本批次有 534 项宿主机回归（<code>PYTHONUTF8=1</code> 下 533 pass / 0 fail / 1 skip）、真实 SDK 26 编译签名及指定真机覆盖安装/启动记录；这些结果不等同全功能验收。详细范围见 <a href="https://github.com/gscsdx/HmChat/blob/main/docs/MULTI_ACCOUNT.md">多账户</a>、<a href="https://github.com/gscsdx/HmChat/blob/main/docs/MESSAGE_DISPLAY.md">消息展示</a>、<a href="https://github.com/gscsdx/HmChat/blob/main/docs/MEDIA.md">媒体</a>、<a href="https://github.com/gscsdx/HmChat/blob/main/docs/VIDEO_PLAYER.md">播放器</a>、<a href="https://github.com/gscsdx/HmChat/blob/main/docs/STORAGE_MANAGEMENT.md">存储管理</a> 和 <a href="https://github.com/gscsdx/HmChat/blob/main/docs/STATUS.md">当前状态</a>。</p>
+<p>公开页面只使用已审查资产与合成测试数据说明，不包含私人会话、手机号、设备序列号、部署凭据或原始截图。</p>
+</article>
+<article class="doc-content" data-doc-language="en" lang="en" hidden>
+<h1>Available features</h1>
+<p>Updated: 2026-11-06. HmChat is an actively developed native third-party Telegram client for HarmonyOS NEXT. It does not yet have full Telegram Web A parity. See the <a href="roadmap.html">roadmap</a>, <a href="changelog.html">changelog</a>, and detailed <a href="https://github.com/gscsdx/HmChat/blob/main/docs/TELEGRAM_WEB_PARITY.md">Web A parity matrix</a>.</p>
+<h2>Reading the status</h2>
+<p>Implemented means real protocol behavior and native interactions exist. Device-verified covers only the named actions and hardware. Partial means known gaps remain. Host tests, SDK builds, device launches, and server synchronization are different evidence. Current acceptance prioritizes the single-column phone and the folded wide-fold device, not every format or device.</p>
+<h2>Capabilities and evidence</h2>
+<div class="doc-table" tabindex="0" role="region" aria-label="Features and plans table"><table>
+<thead>
+<tr><th scope="col">Area</th><th scope="col">Available now</th><th scope="col">Evidence</th><th scope="col">Limits / Web A gaps</th></tr>
+</thead>
+<tbody>
+<tr><td>Authentication</td><td>Separate country/calling-code and phone fields; typing a calling code selects the country/region (<code>+1</code> US, <code>+7</code> Russia, <code>+86</code> China); verification code, existing two-step password and email states; registration/resend branches and 30-second errors</td><td>Two real accounts, update installs and normal restart retention; <code>+1</code>/<code>+7</code>/<code>+86</code> matching checked on the designated device</td><td>Not every registration, delivery channel or recovery case has live coverage</td></tr>
+<tr><td>Multiple accounts</td><td>Nested account manager with avatars, add/switch, isolated credentials/database/download policies; pending logins stay private</td><td>Round trips between two accounts and cold-start/avatar retention</td><td>Only the active account connects; inactive notifications and full logout/draft/unread isolation need more coverage</td></tr>
+<tr><td>Chats and contacts</td><td>Real chats, avatars, unread/draft previews, history paging, existing contacts, Saved Messages, pin/mute entries; complete filter bar (All/Unread/Groups/Channels) with matching empty states; supergroups classified as groups and broadcast channels as channels</td><td>Real navigation, history, drafts and avatars; all four filters shown/switched with empty states retested on the designated device; supergroup/channel classification covered by domain tests</td><td>Search/filter cover loaded data; no server search, cloud folders or complete archive; supergroup/channel display with a real account is not device-tested</td></tr>
+<tr><td>Text and actions</td><td>Messaging/send states, reply, edit, forward, permission-aware delete and copy entry</td><td>Device/Web checks for text, reply/edit, forwarding to Saved Messages and delete-for-self</td><td>Copy not independently device-tested; precise cross-page reply navigation, full read semantics, selection/reactions and permissions remain</td></tr>
+<tr><td>Message display</td><td>Native entities, common RichMessage blocks, group senders/avatars, grouping, dates, forwarding/reply previews</td><td>Read-only comparisons across three real groups; synthetic media regressions</td><td>Complex blocks and complete sticker/GIF/special-message handling remain incomplete</td></tr>
+<tr><td>Photos and albums</td><td>Up to 10 system-selected photos/videos, caption/removal, album sending/grid, browsing, zoom and confirmed export</td><td>Mixed albums in both directions, standalone video, export and double-tap zoom</td><td>Originals, quality/editing/reordering, HEIF, continuous pinch and more failure cases remain</td></tr>
+<tr><td>Video player</td><td>Native progressive AVPlayer streaming and uncached seeking/resume; ±30 seconds, seven speeds, temporary 2× hold with rate restoration, tap/double-tap/swipe, controls, mute and background pause</td><td>Cold-cache 150-second H.264/AAC MP4, remote seeks, playback through chunks to completion, 1.5×→2×→1.5× and skip controls on device</td><td>More codecs/non-faststart/weak-network/call-interruption cases, PiP, subtitles/tracks and quality switching remain</td></tr>
+<tr><td>Storage and traffic</td><td>Per-active-account category/chat clearing, retention/cap, network-specific photo/video/animation limits, traffic totals</td><td>Real statistics, selective clearing, video re-fetch and preference retention</td><td>Maintenance requires a running process; inactive accounts, upload staging, contact exceptions and automatic gallery saving remain</td></tr>
+<tr><td>Network proxy (mihomo)</td><td>In-app VPN switch; subscription-link and YAML import; node/group selection and latency tests; global or HmChat-only scope</td><td>Proxy domain tests plus the real core/subscription path verified on the designated device</td><td>System VPN authorization, protect fallback and background keep-alive after toggling, notifications and release-build runtime remain unverified; the GPL source bundle and third-party licenses are incomplete, so builds are not distributable</td></tr>
+<tr><td>Native appearance</td><td>HDS titles/settings rows for settings, accounts, storage pages; original compact chat details; system menus/sheets, glass tabs, light/dark/system and safe areas</td><td>Page returns, keyboard/draft retention, appearance persistence and system-following on device</td><td>Complete accessibility, large text and every system scenario need separate validation</td></tr>
+<tr><td>Folding and large screens</td><td>Width-based design with an unfolded two-pane static capture</td><td>Privacy-redacted device illustration</td><td>Full folding/rotation/multi-window continuity not accepted; folded form comes first</td></tr>
+<tr><td>Offline preview</td><td>Fictional local fixtures isolated from real accounts</td><td>Domain/UI development</td><td>Local changes are not cloud delivery</td></tr>
+</tbody>
+</table></div>
+<h2>Not yet supported</h2>
+<ul>
+<li>Server global/in-chat search, cloud folders, full archive/profiles/shared media.</li>
+<li>Arbitrary files, complete voice/music and sticker/GIF workflows, message selection/reactions, group/channel administration.</li>
+<li>Background push/reliable offline alerts, calls, Stories and complete privacy/device-session management.</li>
+<li>PiP, subtitles/multiple tracks, quality switching and all device forms.</li>
+</ul>
+<p>Notifications remain roadmap work. Do not depend on the preview for important notifications.</p>
+<h2>Verification baseline</h2>
+<p>This batch has 534 host tests (533 pass / 0 fail / 1 skip with <code>PYTHONUTF8=1</code>), a real SDK 26 signed build, and update-install/launch evidence on the designated device. These are not full-feature acceptance. Details: <a href="https://github.com/gscsdx/HmChat/blob/main/docs/MULTI_ACCOUNT.md">accounts</a>, <a href="https://github.com/gscsdx/HmChat/blob/main/docs/MESSAGE_DISPLAY.md">display</a>, <a href="https://github.com/gscsdx/HmChat/blob/main/docs/MEDIA.md">media</a>, <a href="https://github.com/gscsdx/HmChat/blob/main/docs/VIDEO_PLAYER.md">video</a>, <a href="https://github.com/gscsdx/HmChat/blob/main/docs/STORAGE_MANAGEMENT.md">storage</a>, <a href="https://github.com/gscsdx/HmChat/blob/main/docs/STATUS.md">status</a>.</p>
+<p>Public pages use reviewed assets and synthetic-test descriptions only, without private conversations, phone numbers, device serials, deployment credentials or raw screenshots.</p>
+</article>
+  </main>
+  <footer class="site-footer container"><div class="footer-main"><a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="30" height="30"><span>HmChat</span></a><div class="footer-links"><a href="https://github.com/gscsdx/HmChat/blob/main/LICENSE">GPL-3.0-or-later</a><a href="https://github.com/gscsdx/HmChat/blob/main/THIRD_PARTY_NOTICES.md" data-i18n="footer.notices">第三方声明</a><a href="https://github.com/gscsdx/HmChat/issues" data-i18n="footer.issues">问题反馈</a></div></div><div class="footer-bottom"><p data-i18n="footer.disclaimer">独立开源项目，非 Telegram 官方客户端。第三方依赖遵循各自许可。</p><p data-i18n="footer.privacy">本网站无追踪、无外部字体、无第三方脚本。</p></div></footer>
+</body>
+</html>

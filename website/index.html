@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="HmChat 是开源的鸿蒙 HarmonyOS NEXT 原生 Telegram 第三方客户端，基于 ArkUI + TDLib，持续开发中。查看功能进度、界面预览和源码构建指南。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HmChat｜鸿蒙 HarmonyOS NEXT 原生 Telegram 客户端">
+  <meta property="og:description" content="HmChat 是开源的鸿蒙 HarmonyOS NEXT 原生 Telegram 第三方客户端，基于 ArkUI + TDLib，持续开发中。查看功能进度、界面预览和源码构建指南。">
+  <meta property="og:url" content="https://gscsdx.github.io/HmChat/">
+  <meta property="og:image" content="https://gscsdx.github.io/HmChat/assets/icon.png">
+  <title>HmChat｜鸿蒙 HarmonyOS NEXT 原生 Telegram 客户端</title>
+  <link rel="canonical" href="https://gscsdx.github.io/HmChat/">
+  <link rel="sitemap" type="application/xml" href="https://gscsdx.github.io/HmChat/sitemap.xml">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">跳至内容</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="github" viewBox="0 0 24 24"><path d="M8.5 20.5v-3c-3 .6-3-1.5-4-2m11 5v-3.8c0-1-.3-1.7-.8-2.1 2.6-.3 5.3-1.2 5.3-5.8A4.5 4.5 0 0 0 18.8 6c.1-.4.5-1.9-.1-3.2 0 0-1.1-.4-3.6 1.3a12 12 0 0 0-6.2 0C6.4 2.4 5.3 2.8 5.3 2.8 4.7 4.1 5.1 5.6 5.2 6A4.5 4.5 0 0 0 4 9.3c0 4.6 2.7 5.5 5.3 5.8-.5.4-.8 1.1-.8 2.1"/></symbol>
+    <symbol id="chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-8 8H5l-3 2v-10a9 9 0 0 1 18 0Z"/><path d="M7 10h8M7 14h5"/></symbol>
+    <symbol id="key" viewBox="0 0 24 24"><circle cx="8" cy="9" r="5"/><path d="m12 13 8 8m-3-3 3-3m-6 0 3-3"/></symbol>
+    <symbol id="edit" viewBox="0 0 24 24"><path d="m14 5 5 5M4 20l5-1 12-12a2 2 0 0 0-5-5L4 14v6ZM14 20h7"/></symbol>
+    <symbol id="photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 6-6 5 5 3-3 4 4"/></symbol>
+    <symbol id="draft" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="layers" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8l10-5Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="HmChat"><img src="assets/icon.png" width="36" height="36" alt=""><span>HmChat</span></a>
+      <nav class="main-nav" aria-label="项目导航" data-i18n-aria="navigation">
+        <a href="index.html" data-i18n="nav.home" aria-current="page">概览</a>
+        <a href="features.html" data-i18n="nav.features">现有功能</a>
+        <a href="roadmap.html" data-i18n="nav.roadmap">路线图</a>
+        <a href="changelog.html" data-i18n="nav.changelog">更新日志</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="语言 / Language">
+          <button type="button" data-language="zh" aria-pressed="true">中文</button>
+          <button type="button" data-language="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+        <a class="github-icon" href="https://github.com/gscsdx/HmChat" aria-label="GitHub"><svg><use href="#github"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> HARMONYOS NEXT / OPEN SOURCE</p>
+        <h1 id="hero-title"><span data-i18n="hero.title1">Telegram，</span><br><span class="silver-text" data-i18n="hero.title2">以鸿蒙的方式。</span></h1>
+        <p class="hero-description" data-i18n="hero.description">面向鸿蒙 HarmonyOS NEXT 的开源原生 Telegram 第三方客户端。用 ArkUI 呈现熟悉的聊天，用 TDLib 连接真实的 Telegram。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/gscsdx/HmChat"><svg><use href="#github"/></svg><span data-i18n="hero.source">查看源码</span><svg class="button-arrow"><use href="#external"/></svg></a>
+          <a class="button button-secondary" href="#develop"><span data-i18n="hero.build">开始构建</span><svg><use href="#arrow"/></svg></a>
+        </div>
+        <p class="hero-note"><span class="small-dot"></span><span data-i18n="hero.note">积极开发中 · 当前优先手机单栏体验</span></p>
+        <div class="hero-stack" aria-label="技术栈 / Technology stack"><span>ArkTS + ArkUI</span><span>TDLib</span><span>GPL-3.0-or-later</span></div>
+      </div>
+      <figure class="hero-visual">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="phone-shell"><img class="app-screen" src="assets/app-phone.png" fetchpriority="high" alt="HmChat 手机单栏真机画面，隐私遮挡并合成 Pura X Max 机身示意" data-i18n-alt="hero.screenshot"></div>
+        <figcaption><span class="caption-line"></span><span data-i18n="hero.caption">HarmonyOS NEXT · 经隐私处理的真机画面</span></figcaption>
+      </figure>
+    </section>
+
+    <div class="foundation-strip">
+      <div class="container foundation-inner"><p data-i18n="foundation.label">从界面到连接，原生实现。</p><div><span>ARKUI</span><i></i><span>NODE-API</span><i></i><span>TDLIB</span><i></i><span>HARMONYOS ASSET</span></div></div>
+    </div>
+
+    <section class="section container" id="features" aria-labelledby="features-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / THE EXPERIENCE</p><h2 id="features-title" data-i18n="features.title">从日常聊天开始。</h2></div><p data-i18n="features.intro">核心链路已经接通。每项能力继续按真实协议、原生交互和设备证据推进。</p></div>
+      <div class="features-grid">
+        <article class="feature-card"><svg class="feature-icon"><use href="#key"/></svg><h3 data-i18n="feature.auth.title">真实账号，真实连接</h3><p data-i18n="feature.auth.text">手机号、验证码、二步验证与邮箱验证；国家和区号独立选择，登录会话可恢复。</p><span class="feature-detail" data-i18n="feature.auth.detail">TDLib 认证状态驱动</span></article>
+        <article class="feature-card"><svg class="feature-icon"><use href="#chat"/></svg><h3 data-i18n="feature.chats.title">熟悉的会话节奏</h3><p data-i18n="feature.chats.text">真实头像、未读、联系人与收藏夹。已加载会话可搜索、筛选、置顶和静音。</p><span class="feature-detail" data-i18n="feature.chats.detail">本地筛选 · 非全局搜索</span></article>
+        <article class="feature-card"><svg class="feature-icon"><use href="#edit"/></svg><h3 data-i18n="feature.messages.title">把消息处理好</h3><p data-i18n="feature.messages.text">文本收发、回复、编辑、单条转发与删除。长按菜单按服务端权限开放操作。</p><span class="feature-detail" data-i18n="feature.messages.detail">发送中、成功与失败分开呈现</span></article>
+        <article class="feature-card"><svg class="feature-icon"><use href="#photo"/></svg><h3 data-i18n="feature.photos.title">图片，点开就看</h3><p data-i18n="feature.photos.text">最多 10 项图片/视频混选、预览与相册收发；图片缩放，视频边下边播、未缓存定位和倍速手势。</p><span class="feature-detail" data-i18n="feature.photos.detail">选择图片后，由你确认发送</span></article>
+        <article class="feature-card"><svg class="feature-icon"><use href="#draft"/></svg><h3 data-i18n="feature.drafts.title">留住没说完的话</h3><p data-i18n="feature.drafts.text">文本草稿保存、历史分页、群发送者与日期。回复和编辑不覆盖原来的普通草稿。</p><span class="feature-detail" data-i18n="feature.drafts.detail">完整富草稿与跨端边界仍在完善</span></article>
+        <article class="feature-card"><svg class="feature-icon"><use href="#layers"/></svg><h3 data-i18n="feature.native.title">属于鸿蒙的交互</h3><p data-i18n="feature.native.text">官方导航、菜单、弹层与玻璃底栏。浅色、深色或跟随系统，兼顾键盘和安全区。</p><span class="feature-detail" data-i18n="feature.native.detail">原生 ArkUI · 无 WebView 外壳</span></article>
+      </div>
+    </section>
+
+    <section class="section container device-section" aria-labelledby="device-title">
+      <div class="device-heading"><div><p class="eyebrow">ON DEVICE / PURA X MAX</p><h2 id="device-title" data-i18n="device.title">展开，给会话更多空间。</h2></div><p data-i18n="device.text">双栏布局的真机记录。当前仅完成该画面采集；展开、旋转和多窗口的持续交互仍待验证。</p></div>
+      <figure class="unfolded-figure"><img src="assets/app-unfolded.png" loading="lazy" alt="HmChat 展开双栏真机画面，隐私遮挡并合成 Pura X Max 机身示意" data-i18n-alt="device.screenshot"><figcaption data-i18n="device.caption">真机画面经隐私遮挡与机身示意合成；展开形态仍在持续验证。</figcaption></figure>
+    </section>
+
+    <section class="section container" id="progress" aria-labelledby="progress-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / WORK IN THE OPEN</p><h2 id="progress-title" data-i18n="progress.title">进度透明，边界明确。</h2></div><a class="text-link" href="https://github.com/gscsdx/HmChat/blob/main/docs/STATUS.md"><span data-i18n="progress.status">查看当前状态</span><svg><use href="#external"/></svg></a></div>
+      <div class="progress-layout">
+        <div class="milestones">
+          <div class="milestone"><span class="milestone-marker"><svg><use href="#check"/></svg></span><div><h3 data-i18n="progress.one.title">核心链路已有实测</h3><p data-i18n="progress.one.text">SDK 26 构建、真实账号登录、文本和图片收发，以及部分消息操作的跨端核对。</p></div></div>
+          <div class="milestone"><span class="milestone-marker marker-current"><span></span></span><div><h3 data-i18n="progress.two.title">现在：完善手机体验</h3><p data-i18n="progress.two.text">先把单栏聊天、草稿、媒体和消息操作做好。功能以 Telegram Web A 手机界面为对齐基线。</p></div></div>
+          <div class="milestone"><span class="milestone-marker marker-next">03</span><div><h3 data-i18n="progress.three.title">下一步：逐项补全能力</h3><p data-i18n="progress.three.text">服务器搜索、文件夹与归档、完整媒体、群管理、通知后台和通话，分阶段实现与验收。</p></div></div>
+        </div>
+        <aside class="limits-card"><span class="outline-tag" data-i18n="limits.badge">开发预览</span><h3 data-i18n="limits.title">现在还不是完整替代品。</h3><ul><li data-i18n="limits.search">搜索范围限已加载会话，尚无服务器全局搜索。</li><li data-i18n="limits.media">图片、相册和视频已实现；语音、任意文件、贴纸与 GIF 的完整交互仍待完善。</li><li data-i18n="limits.platform">多账户切换已支持；非活动账户通知、后台推送、通话及完整群管理仍待实现。</li><li data-i18n="limits.device">当前优先手机单栏；展开形态、平板和多窗口未完成验收。</li></ul><a class="text-link" href="https://github.com/gscsdx/HmChat/blob/main/docs/TELEGRAM_WEB_PARITY.md"><span data-i18n="limits.link">逐项查看功能差距</span><svg><use href="#arrow"/></svg></a></aside>
+      </div>
+    </section>
+
+    <section class="engineering-section" id="engineering" aria-labelledby="engineering-title">
+      <div class="container engineering-layout">
+        <div class="engineering-copy"><p class="eyebrow">03 / BUILT TO BE UNDERSTOOD</p><h2 id="engineering-title" data-i18n="engineering.title">代码有边界，协作有上下文。</h2><p data-i18n="engineering.text">界面、领域状态、协议与系统适配各司其职。纯逻辑可独立测试，设备行为由真实 SDK 和实际运行验证。</p><a class="text-link" href="https://github.com/gscsdx/HmChat/blob/main/docs/ARCHITECTURE.md"><span data-i18n="engineering.link">阅读架构说明</span><svg><use href="#external"/></svg></a></div>
+        <div class="architecture" role="list" aria-label="架构分层" data-i18n-aria="engineering.diagram">
+          <div class="architecture-layer" role="listitem"><span class="layer-index">01</span><div><strong>ArkUI</strong><span data-i18n="architecture.ui">界面 · 导航 · 原生交互</span></div><span class="layer-file">.ets</span></div>
+          <div class="architecture-layer" role="listitem"><span class="layer-index">02</span><div><strong>Domain + TelegramClient</strong><span data-i18n="architecture.domain">状态 · 草稿 · 协议 · 可测试逻辑</span></div><span class="layer-file">.ts</span></div>
+          <div class="architecture-layer" role="listitem"><span class="layer-index">03</span><div><strong>HarmonyOS + Node-API</strong><span data-i18n="architecture.platform">生命周期 · 安全存储 · 原生桥接</span></div><span class="layer-file">.ets / .cpp</span></div>
+          <div class="architecture-layer" role="listitem"><span class="layer-index">04</span><div><strong>TDLib</strong><span data-i18n="architecture.tdlib">Telegram 连接 · 沙箱内加密数据库</span></div><span class="layer-file">C++</span></div>
+        </div>
+      </div>
+      <div class="container"><div class="ai-card"><div class="ai-mark" aria-hidden="true">[<span>AI</span>]</div><div><h3 data-i18n="ai.title">AI-native，是开发方式。</h3><p data-i18n="ai.text">AGENTS.md、架构文档、状态记录、脚本与测试，让 AI 和开发者可以有据可循地接力。它不表示把用户聊天上传给 AI；当前应用不提供 AI 聊天处理功能。</p></div><a class="text-link" href="https://github.com/gscsdx/HmChat/blob/main/docs/AI_WORKFLOW.md"><span data-i18n="ai.link">了解工作流</span><svg><use href="#arrow"/></svg></a></div></div>
+    </section>
+
+    <section class="section container develop-layout" id="develop" aria-labelledby="develop-title">
+      <div class="develop-copy"><p class="eyebrow">04 / MAKE IT YOURS</p><h2 id="develop-title" data-i18n="develop.title">从源码开始。</h2><p data-i18n="develop.text">准备 DevEco Studio 与 HarmonyOS SDK 26，用脚本检查环境、构建原生依赖和应用。</p><ol class="setup-notes"><li data-i18n="develop.config">运行 setup 后，在本机配置自己的 Telegram API ID / Hash 与 DevEco 签名。</li><li data-i18n="develop.native">首次构建需下载并编译 TDLib / OpenSSL；请预留时间。</li><li data-i18n="develop.safety">私有配置、签名与账号数据不进入 Git。普通用户登录无需申请开发者 API。</li></ol><a class="button button-secondary" href="https://github.com/gscsdx/HmChat/blob/main/docs/DEVELOPMENT.md"><span data-i18n="develop.guide">完整开发指南</span><svg><use href="#external"/></svg></a></div>
+      <div class="terminal"><div class="terminal-header"><div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div><span>terminal</span><button class="copy-button" id="copy-command" type="button" hidden><svg><use href="#copy"/></svg><span data-i18n="develop.copy">复制</span></button></div><pre tabindex="0" aria-label="开发命令" data-i18n-aria="develop.commands"><code id="build-commands">git clone https://github.com/gscsdx/HmChat.git
+cd HmChat
+
+./scripts/setup.sh
+# Configure your API credentials and DevEco signing locally.
+./scripts/doctor.sh
+bash -c 'source scripts/env.sh; ohpm install'
+./scripts/build-tdlib.sh all
+
+./scripts/configure-telegram.sh
+./scripts/test-domain.sh
+./scripts/build.sh</code></pre><div class="terminal-footer"><span class="small-dot"></span><span data-i18n="develop.footer">本机构建 · 自有 API 配置 · 自有签名</span></div><p id="copy-status" class="sr-only" role="status" aria-live="polite"></p></div>
+    </section>
+
+    <section class="container open-source-section" aria-labelledby="open-title"><div><p class="eyebrow">OPEN BY DESIGN</p><h2 id="open-title" data-i18n="open.title">一起把原生体验做好。</h2><p data-i18n="open.text">阅读源码、提交问题、完善文档，或认领一个可验证的功能。</p></div><a class="button button-primary" href="https://github.com/gscsdx/HmChat"><span data-i18n="open.link">在 GitHub 上参与</span><svg><use href="#external"/></svg></a></section>
+  </main>
+
+  <footer class="site-footer container"><div class="footer-main"><a class="brand" href="#"><img src="assets/icon.png" alt="" width="30" height="30"><span>HmChat</span></a><div class="footer-links"><a href="https://github.com/gscsdx/HmChat/blob/main/LICENSE">GPL-3.0-or-later</a><a href="https://github.com/gscsdx/HmChat/blob/main/THIRD_PARTY_NOTICES.md" data-i18n="footer.notices">第三方声明</a><a href="https://github.com/gscsdx/HmChat/issues" data-i18n="footer.issues">问题反馈</a></div></div><div class="footer-bottom"><p data-i18n="footer.disclaimer">独立开源项目，非 Telegram 官方客户端。第三方依赖遵循各自许可。</p><p data-i18n="footer.privacy">本网站无追踪、无外部字体、无第三方脚本。</p></div></footer>
+</body>
+</html>
