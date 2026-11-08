@@ -3,7 +3,7 @@
   将工程内可再生的缓存、日志与构建目录重定向到工程外缓存根。
 
 .DESCRIPTION
-  默认缓存根为 D:\huawei\harlgram。工程内保留同名目录入口，实际内容通过
+  默认缓存根为 F:\HmChat-cache。工程内保留同名目录入口，实际内容通过
   Windows 目录联接（junction）存放在缓存根，因此 DevEco、hvigor、ohpm、
   测试与脚本仍使用原有相对路径。
 
@@ -17,7 +17,7 @@
   工程根目录，默认是本脚本的上一级目录。
 
 .PARAMETER CacheHome
-  缓存根目录，默认 D:\huawei\harlgram。
+  缓存根目录，默认 F:\HmChat-cache。
 
 .PARAMETER Repair
   修复模式：联接指向错误目标时删除旧联接后重建；遇到非空真实目录只警告，
@@ -37,12 +37,12 @@
   powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\cache-layout.ps1 -MigrateUserHome
 
 .EXAMPLE
-  powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\cache-layout.ps1 -CacheHome 'D:\huawei\harlgram' -Repair
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\cache-layout.ps1 -CacheHome 'F:\HmChat-cache' -Repair
 #>
 [CmdletBinding()]
 param(
   [string]$ProjectRoot = '',
-  [string]$CacheHome = 'D:\huawei\harlgram',
+  [string]$CacheHome = 'F:\HmChat-cache',
   [switch]$Repair,
   [switch]$Quiet,
   [switch]$MigrateUserHome

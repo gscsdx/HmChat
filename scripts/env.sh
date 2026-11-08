@@ -8,7 +8,7 @@ HARLGRAM_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 # 工程内同名入口由 scripts/cache-layout.ps1 建立目录联接到该位置。
 if [[ -z "${HARLGRAM_CACHE_HOME:-}" ]]; then
   case "$(uname -s 2>/dev/null || printf '%s' unknown)" in
-    MINGW*|MSYS*|CYGWIN*) HARLGRAM_CACHE_HOME="D:/huawei/harlgram" ;;
+    MINGW*|MSYS*|CYGWIN*) HARLGRAM_CACHE_HOME="F:/HmChat-cache" ;;
   esac
 fi
 export HARLGRAM_CACHE_HOME
